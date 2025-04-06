@@ -60,7 +60,7 @@
             localStorage.setItem('isLoggedIn', 'true'); // Marquer l'utilisateur comme connecté
 
             alert('Inscription réussie !');
-            window.location.href = 'dashboard.html'; // Rediriger vers le tableau de bord
+            window.location.href = 'dashboard.php'; // Rediriger vers le tableau de bord
         });
     </script>
 </body>

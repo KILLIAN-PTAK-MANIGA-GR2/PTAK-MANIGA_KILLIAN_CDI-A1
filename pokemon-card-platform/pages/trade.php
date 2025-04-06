@@ -18,7 +18,7 @@
         <nav class="desktop-nav">
             <ul>
                 <li><a href="acceuile.php">Accueil</a></li>
-                <li><a href="dashboard.html">Tableau de Bord</a></li>
+                <li><a href="dashboard.php">Tableau de Bord</a></li>
                 <li><a href="#" id="logout-button">Déconnexion</a></li>
             </ul>
         </nav>

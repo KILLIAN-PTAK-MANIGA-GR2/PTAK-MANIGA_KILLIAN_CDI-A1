@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokémon Card Collection Platform</title>
+    <!-- Liens vers les fichiers CSS -->
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/themes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Scripts JavaScript -->
     <script src="../assets/js/app.js" type="module" defer></script>
     <script src="../assets/js/api.js" type="module" defer></script>
     <script src="../assets/js/ui.js" type="module" defer></script>
@@ -18,19 +20,21 @@
         <nav class="desktop-nav">
             <ul>
                 <li><a href="acceuile.php">Accueil</a></li>
-                <li><a href="login.html" id="login-link">Connexion</a></li>
-                <li><a href="register.html" id="register-link">Inscription</a></li>
-                <li><a href="dashboard.html">Tableau de Bord</a></li>
-                <li><a href="trade.html">Échanger</a></li>
+                <li><a href="login.php" id="login-link">Connexion</a></li>
+                <li><a href="register.php" id="register-link">Inscription</a></li>
+                <li><a href="dashboard.php">Tableau de Bord</a></li>
+                <li><a href="trade.php">Échanger</a></li>
                 <li><a href="#" id="logout-link" class="hidden">Déconnexion</a></li>
             </ul>
         </nav>
-
+        <!-- Actions dans l'en-tête -->
         <div class="header-actions">
             <div class="container">
+                <!-- Bouton pour basculer entre les thèmes clair et sombre -->
                 <label class="toggle" for="switch">
                     <input id="switch" class="input" type="checkbox" />
                     <div class="icon icon--moon">
+                        <!-- Icône de lune pour le mode sombre -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 512 512" id="moon">
                             <g>
                                 <path
@@ -54,6 +58,7 @@
                         </svg>
                     </div>
                     <div class="w-8 icon icon--sun">
+                        <!-- Icône de soleil pour le mode clair -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47.5 47.5" id="sun">
                             <g fill="#ffac33" transform="matrix(1.25 0 0 -1.25 0 47.5)">
                                 <path d="M17 35s0 2 2 2 2-2 2-2v-2s0-2-2-2-2 2-2 2v2zM35 21s2 0 2-2-2-2-2-2h-2s-2 0-2 2 2 2 2 2h2zM5 21s2 0 2-2-2-2-2-2H3s-2 0-2 2 2 2 2 2h2zM10.121 29.706s1.414-1.414 0-2.828-2.828 0-2.828 0l-1.415 1.414s-1.414 1.414 0 2.829c1.415 1.414 2.829 0 2.829 0l1.414-1.415ZM31.121 8.707s1.414-1.414 0-2.828-2.828 0-2.828 0l-1.414 1.414s-1.414 1.414 0 2.828 2.828 0 2.828 0l1.414-1.414ZM30.708 26.879s-1.414-1.414-2.828 0 0 2.828 0 2.828l1.414 1.414s1.414 1.414 2.828 0 0-2.828 0-2.828l-1.414-1.414ZM9.708 5.879s-1.414-1.414-2.828 0 0 2.828 0 2.828l1.414 1.414s1.414 1.414 2.828 0 0-2.828 0-2.828L9.708 5.879ZM17 5s0 2 2 2 2-2 2-2V3s0-2-2-2-2 2-2 2v2zM29 19c0 5.523-4.478 10-10 10-5.523 0-10-4.477-10-10 0-5.522 4.477-10 10-10 5.522 0 10 4.478 10 10"></path>
@@ -68,22 +73,13 @@
     <button class="sidebar-toggle">☰</button>
 
     <!-- Sidebar -->
-    <div class="sidebar hidden">
-        <ul>
-            <li><a href="acceuile.php">Accueil</a></li>
-            <li><a href="login.html">Connexion</a></li>
-            <li><a href="register.html">Inscription</a></li>
-            <li><a href="dashboard.html">Tableau de Bord</a></li>
-            <li><a href="trade.html">Échanger</a></li>
-        </ul>
-    </div>
     <div id="sidebar" class="sidebar hidden">
         <ul>
             <li><a href="acceuile.php">Accueil</a></li>
-            <li><a href="login.html" id="login-link-sidebar">Connexion</a></li>
-            <li><a href="register.html" id="register-link-sidebar">Inscription</a></li>
-            <li><a href="dashboard.html">Tableau de Bord</a></li>
-            <li><a href="trade.html">Échanger</a></li>
+            <li><a href="login.php" id="login-link-sidebar">Connexion</a></li>
+            <li><a href="register.php" id="register-link-sidebar">Inscription</a></li>
+            <li><a href="dashboard.php">Tableau de Bord</a></li>
+            <li><a href="trade.php">Échanger</a></li>
             <li><a href="#" id="logout-link-sidebar" class="hidden">Déconnexion</a></li>
         </ul>
     </div>
@@ -98,6 +94,7 @@
                 <!-- Les cartes Pokémon seront chargées ici -->
             </div>
         </section>
+    
         <section id="booster-pack">
             <h2>Ouvrir un Booster</h2>
             <button id="open-booster" class="btn">
@@ -111,21 +108,37 @@
             </div>
             <p id="login-warning" class="hidden">Veuillez vous connecter pour ouvrir un booster.</p>
         </section>
+
         <section id="trade-section">
             <h2>Échanger des Cartes</h2>
             <button id="trade-button" class="btn">
                 <i class="fas fa-exchange-alt"></i> Échanger
             </button>
         </section>
+
+        <section id="date-date">
+            <h2>Date et Heure</h2>
+            <div id="date-time">
+                <?php if (isset($dateTimeData['error'])): ?>
+                    <p>Erreur : <?php echo htmlspecialchars($dateTimeData['error']); ?></p>
+                <?php elseif (isset($dateTimeData['datetime'])): ?>
+                    <p>Fuseau Horaire : <?php echo htmlspecialchars($dateTimeData['timezone_name']); ?></p>
+                    <p>Date et Heure Locales : <?php
+                        $dateTime = new DateTime($dateTimeData['datetime']);
+                        echo $dateTime->format('d/m/Y H:i:s'); // Format français : jour/mois/année heure:minute:seconde
+                    ?></p>
+                <?php else: ?>
+                    <p>Impossible de récupérer la date et l'heure.</p>
+                <?php endif; ?>
+            </div>
+        </section>
+
     </main>
     <footer>
-        <p>&copy; 2023 Pokémon Card Collection Platform | 
-            <?php
-            require_once 'backend/helpers/date_helper.php';
-            echo getFormattedDate();
-            ?>
+        <p>&copy; 2023 Pokémon Card Collection Platform.
         </p>
     </footer>
+
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const sidebarToggle = document.getElementById('sidebar-toggle');
@@ -158,6 +171,61 @@
                 alert('Vous avez été déconnecté.');
                 window.location.href = 'acceuile.php'; // Rediriger vers la page d'accueil
             });
+        });
+
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dateTimeElement = document.getElementById('date-time');
+            let offset = 0; // Décalage entre l'heure locale et l'heure de l'API
+            let location = '';// Emplacement du fuseau horaire
+
+            // Fonction pour récupérer l'heure depuis l'API
+            async function fetchDateTimeFromAPI() {
+                try {
+                    const response = await fetch('https://timezone.abstractapi.com/v1/current_time/?api_key=70da21483b474cbcbdf83e6324fe889c&location=Paris, France');
+                    const data = await response.json();
+
+                    if (data && data.datetime) {
+                        const apiTime = new Date(data.datetime);
+                        offset = apiTime - new Date(); // Calculer le décalage
+                        location = data.timezone_location || 'France'; // Récupérer l'emplacement ou définir une valeur par défaut
+                    }
+                } catch (error) {
+                    console.error('Erreur lors de la récupération de l\'heure depuis l\'API :', error);
+                }
+            }
+
+            // Fonction pour mettre à jour l'heure
+            function updateDateTime() {
+                const now = new Date(new Date().getTime() + offset); // Ajouter le décalage
+                const formattedTime = now.toLocaleString('fr-FR', {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                });
+
+                if (dateTimeElement) {
+                    dateTimeElement.innerHTML = `
+                        <p>Fuseau Horaire : ${location}</p>
+                        <p>Date et Heure Locales : ${formattedTime}</p>
+                    `;
+                }
+            }
+
+            // Mettre à jour l'heure toutes les secondes
+            setInterval(updateDateTime, 1000);
+
+            // Synchroniser avec l'API toutes les minutes
+            setInterval(fetchDateTimeFromAPI, 60000);
+
+            // Appeler immédiatement les fonctions
+            fetchDateTimeFromAPI();
+            updateDateTime();
         });
     </script>
 </body>

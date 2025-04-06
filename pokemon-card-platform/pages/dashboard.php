@@ -17,7 +17,7 @@
         <nav class="desktop-nav">
             <ul>
                 <li><a href="acceuile.php">Accueil</a></li>
-                <li><a href="trade.html">Échanger des Cartes</a></li>
+                <li><a href="trade.php">Échanger des Cartes</a></li>
                 <li><a href="#" id="logout-button">Déconnexion</a></li>
             </ul>
         </nav>
